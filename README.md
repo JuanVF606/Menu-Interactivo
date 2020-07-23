@@ -1,8 +1,6 @@
 # Menu-Interactivo
 En el siguente menu podras encontrar:
 
-1. Jugar al Buscaminas creado por ti o por la maquina.
-2. Diversidad de paginas webs.
 
 
                 INSTRUCCIONES:
