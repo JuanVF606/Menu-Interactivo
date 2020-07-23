@@ -14,6 +14,6 @@ En el siguente menu podras encontrar:
             3.3) Formulario
         4. A Disfrutar!!!  
 
-                NOTAS:
+    NOTAS:
     a) EL JUEGO BUSCAMINAS NO ESTA TERMINADO AL 100%, SOLO ESTA HABILITADA LA OPCION 3.
     
