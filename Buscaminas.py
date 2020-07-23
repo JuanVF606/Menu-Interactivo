@@ -300,6 +300,8 @@ def opciones():
         Dificultades()
     if _print == 3:
         BuscaminasPredet()
+    if _print ==4:
+        print('ADIOS!!')
         
 #Menu Del juego:
 def Menu():
