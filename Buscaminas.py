@@ -4,6 +4,32 @@ M1 = 'Bienvenido al Juego buscaminas'
 
 #                           DEFINICIONES
 #Configuracion del buscaminas PREDETERMINADO:
+def IM():
+    n = 6
+    T = []
+    i = 1
+    while (i<=n):
+        F = ['.'] * n
+        T.append(F)
+        i = i+1
+    print('', end='  ')
+    j=0
+    while j<n:
+        print(j+1, end=' ')
+        j=j+1
+    print('', end='\n')
+    i=0
+    while i<n:
+        j=0
+        print(chr(i+65), end=' ') #Letra al principio de cada fila.
+        while j<n:
+            if T[i][j] == '*':
+                print('.', end=' ')
+            else:
+                print(T[i][j], end=' ')
+            j=j+1
+        print('', end='\n')
+        i=i+1
 def BuscaminasPredet():
     n = 6
     T = []
@@ -12,6 +38,7 @@ def BuscaminasPredet():
         F = ['.'] * n
         T.append(F)
         i = i+1
+    IM()
     strPos = input('Ingresa  3 posiciones aleatorias: ')
     strPos = strPos.upper()
     numMinas = 0
@@ -293,7 +320,7 @@ def Dificultades():
 
 #Opciones:
 def opciones():
-    _print = int(input('(1) Tablero Personalizado. (2) Tablero con manejos de Archivos. (3) Tablero con ingreso de minas por el Usuario. (4) Salir:  '))
+    _print = int(input('(1) Tablero Personalizado. (2) Tablero Automatico. (3) Tablero con ingreso de minas por Ud. (4) Salir:  '))
     if _print == 1:
         print('Proximamente')
     if _print == 2:
