@@ -14,4 +14,3 @@ En el siguente menu podras encontrar:
 
     NOTAS:
     a) EL JUEGO BUSCAMINAS NO ESTA TERMINADO AL 100%, SOLO ESTA HABILITADA LA OPCION 3.
-    
