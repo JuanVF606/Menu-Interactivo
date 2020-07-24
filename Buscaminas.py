@@ -1,7 +1,5 @@
 #Mensajes:
 M1 = 'Bienvenido al Juego buscaminas'
-
-
 #                           DEFINICIONES
 #Configuracion del buscaminas PREDETERMINADO:
 def IM():
@@ -125,7 +123,6 @@ def BuscaminasPredet():
             print('GANASTE')
         if perdiste == True:
             print('PERDISTE')        
-
 #Configuracion Juego Buscaminas con manejo de archivos :
 from random import randint
 def MINAS_ALEATORIAS(Nivel_DIFICULTAD,dimension):
@@ -150,7 +147,6 @@ def MINAS_ALEATORIAS(Nivel_DIFICULTAD,dimension):
             Explosion.append(posMina)
             i = i+1
     return Explosion
- 
 def IMPRIME_TABLERO(T, n):
     print('  ', end='  ')
     j = 0
@@ -174,7 +170,6 @@ def IMPRIME_TABLERO(T, n):
             j = j+1
         print('', end='\n')
         i = i+1
-
 def TABLERO(n):
     T = []
     i = 1
@@ -183,7 +178,6 @@ def TABLERO(n):
         T.append(F)
         i = i+1
     return T
-
 def AJUSTES_JUEGO(fichero):
     _file = open(fichero, "r")
     Nivel_Dimension = int(_file.readline())
@@ -191,7 +185,6 @@ def AJUSTES_JUEGO(fichero):
     _file.close()
     Nivel_DIFICULTAD = Nivel_DIFICULTAD.replace('\n','')
     return Nivel_Dimension, Nivel_DIFICULTAD
- 
 def Guarda_Minas(MINE_position, Nivel_Dimension, nombre_Documento):   
     nombre_Documento = nombre_Documento.replace("txt", "sal")
     N_document = open(nombre_Documento, "w")
@@ -201,7 +194,6 @@ def Guarda_Minas(MINE_position, Nivel_Dimension, nombre_Documento):
         N_document.write(Position)
         N_document.write("\n")
     N_document.close()
-
 def generarTablero(fichero):
     if fichero == 'Facil.sal' or fichero =='facil.sal':
         file = open(fichero, "r")
@@ -223,7 +215,6 @@ def generarTablero(fichero):
         MT[fila][columna] = "*" 
         TOTALMINAS = TOTALMINAS + 1 
     return MT, dimension, TOTALMINAS
-
 def juego(MT,dimension,TOTALMINAS):
     IMPRIME_TABLERO(MT, dimension)
     Victoria = False
@@ -293,8 +284,12 @@ def juego(MT,dimension,TOTALMINAS):
         if Derrota == True:
             print('PERDISTE')
 ########################################################################    
+
+
+
 def Dificultades():
-    print("")
+    
+    
     print ("que dificultad desea?")
     print (" 1. facil.")
     print (" 2. medio.")
@@ -317,13 +312,14 @@ def Dificultades():
         Fichero = str(input("Ingresa nombre del archivo >> Experto.sal: "))
         MT,dimension,TOTALMINAS = generarTablero(Fichero)
         juego(MT,dimension,TOTALMINAS)
-
 #Opciones:
 def opciones():
+    
     _print = int(input('(1) Tablero Personalizado. (2) Tablero Automatico. (3) Tablero con ingreso de minas por Ud. (4) Salir:  '))
     if _print == 1:
         print('Proximamente')
     if _print == 2:
+        print('PROXIMAMENTE')
         Dificultades()
     if _print == 3:
         BuscaminasPredet()
@@ -339,3 +335,4 @@ def Menu():
 
 #Bloque Principal
 
+Menu()
