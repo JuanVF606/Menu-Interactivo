@@ -4,7 +4,7 @@ def CategoriaJuegos(opcion):
     if opcion == 1:
         Buscaminas.Menu()
     if opcion ==2:
-        TresEnRayas.Menu()
+        TresEnRayas.JUEGO()
 
 
 def Menu():
