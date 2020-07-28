@@ -20,18 +20,18 @@ def inicio_Juego():
 
 #CREACION DEL TABLERO:
 def tablero():
-    print('TRES EN RAYA / TIC-TAC-TOE')
+    print("TRES EN RAYA / TIC-TAC-TOE")
     print()
     print("         |        |       ")
-    print("1   {}    |2  {}   |3  {}           ".format(matriz[0],matriz[1],matriz[2]))
+    print(f"1   {matriz[0]}    |2  {matriz[1]}   |3  {matriz[2]}   ")
     print("         |        |       ")
     print('--------------------------')
     print("         |        |       ")
-    print("4   {}    |5  {}   |6  {}           ".format(matriz[3],matriz[4],matriz[5]))
+    print(f"4   {matriz[3]}    |5  {matriz[4]}   |6  {matriz[5]}   ")
     print("         |        |       ")
     print('--------------------------')
     print("         |        |       ")
-    print("7   {}    |8  {}   |9  {}           ".format(matriz[6],matriz[7],matriz[8]))
+    print(f"7   {matriz[6]}    |8  {matriz[7]}   |9  {matriz[8]}   ")
     print("         |        |       ")
 
 #EMPATE-GANASTE-PERDISTE:
@@ -79,10 +79,12 @@ def mov_Ord():
                 casilla=i
     
     if casillas == 9:
-        if copia[j]==" ":
-            copia[j]=humano
-        if victoria(copia)==True:
-            casilla= j
+        for j in posiciones:
+            copia = List(matriz)
+            if copia[j]==" ":
+                copia[j]=humano
+            if victoria(copia)==True:
+                casilla= j
     
     if casillas == 9:
         while not Stop:
@@ -130,4 +132,4 @@ def JUEGO():
             else:
                 mov_Jugador()
     
-JUEGO()
+# JUEGO()
