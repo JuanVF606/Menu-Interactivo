@@ -2,8 +2,7 @@
 M1 = 'Bienvenido al Juego buscaminas'
 #                           DEFINICIONES
 #Configuracion del buscaminas PREDETERMINADO:
-def IM():
-    n = 6
+def IM(n):
     T = []
     i = 1
     while (i<=n):
@@ -28,15 +27,14 @@ def IM():
             j=j+1
         print('', end='\n')
         i=i+1
-def BuscaminasPredet():
-    n = 6
+def BuscaminasPredet(n):
     T = []
     i = 1
     while (i<=n):
         F = ['.'] * n
         T.append(F)
         i = i+1
-    IM()
+    IM(n)
     strPos = input('Ingresa  3 posiciones aleatorias: ')
     strPos = strPos.upper()
     numMinas = 0
@@ -71,6 +69,9 @@ def BuscaminasPredet():
     while perdiste == False and ganaste == False:
         strPos = input('Ingresa la casilla del tablero que quieres abrir: ')
         strPos = strPos.upper()
+        if len(strPos)==3:
+            x = ord(MINAS[0])-65
+            y = int(MINAS[1:])-1
         x = ord(strPos[0])-65
         y = int(strPos[1])-1
         if 0 <= x < n and 0 <= y < n:
@@ -126,7 +127,6 @@ def BuscaminasPredet():
 #Configuracion Juego Buscaminas con manejo de archivos :
 from random import randint
 def MINAS_ALEATORIAS(Nivel_DIFICULTAD,dimension):
-
     if Nivel_DIFICULTAD == "F":
         Porcentaje_Minas = 10
     elif Nivel_DIFICULTAD == "M":
@@ -285,8 +285,6 @@ def juego(MT,dimension,TOTALMINAS):
             print('PERDISTE')
 ########################################################################    
 
-
-
 def Dificultades():
     
     
@@ -322,7 +320,8 @@ def opciones():
         print('PROXIMAMENTE')
         Dificultades()
     if _print == 3:
-        BuscaminasPredet()
+        n = int(input('Favor de ingresar el tamaño de su tablero: '))
+        BuscaminasPredet(n)
     if _print ==4:
         print('ADIOS!!')
         
